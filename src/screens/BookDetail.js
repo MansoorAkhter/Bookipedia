@@ -3,9 +3,12 @@ import {
   Dimensions,
   Image,
   Linking,
+  Pressable,
   ScrollView,
   StyleSheet,
   Text,
+  TextInput,
+  TouchableOpacity,
   View,
 } from 'react-native';
 import React from 'react';
@@ -39,7 +42,7 @@ const BookDetail = ({route}) => {
   };
 
   return (
-    <View style={{width: width, backgroundColor:"#fff"}}>
+    <View style={{width: width, backgroundColor: '#fff'}}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollview}>
@@ -61,7 +64,7 @@ const BookDetail = ({route}) => {
 
             {/* Rating, Reviews, Price */}
             <View style={styles.wrprRRP}>
-              <View style={[styles.containerRRP, {rowGap:10}]}>
+              <View style={[styles.containerRRP, {rowGap: 10}]}>
                 <Text style={[styles.titleRRP]}>rating</Text>
                 <Image
                   source={require('../assets/icons/rating.png')}
@@ -119,7 +122,10 @@ const styles = StyleSheet.create({
     height: 500,
     padding: 20,
     marginTop: 10,
-    elevation: 4,
+    elevation: 14,
+    shadowOpacity: 0.3,
+    shadowColor: '#000',
+    shadowRadius: 10,
     borderRadius: 7,
     backgroundColor: '#fff',
   },
@@ -132,9 +138,9 @@ const styles = StyleSheet.create({
   },
   wrprRRP: {
     height: '10%',
-    width:"100%",
+    width: '100%',
     flexDirection: 'row',
-    alignItems:"center",
+    alignItems: 'center',
     justifyContent: 'space-between',
     paddingHorizontal: 3,
     marginTop: 5,

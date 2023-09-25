@@ -29,8 +29,8 @@ const Book = memo(({data, wishHandler, navHandler, isFavorited}) => {
         </View>
 
         {/* Book Title, rating, review & price container */}
-        <View style={{height: '17%'}}>
-          <Text style={styles.title}>{data?.title}</Text>
+        <View style={{height: '25%'}}>
+          <Text style={styles.title} numberOfLines={2}>{data?.title}</Text>
 
           <View style={styles.ratingContainer}>
             <Image
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
   title: {fontWeight: '600', color: '#000', fontSize: 14, marginVertical: 5},
   bookImg: {
     width: '100%',
-    height: '83%',
+    height: '80%',
     borderRadius: 10,
     overflow:"hidden",
     alignItems: 'center',

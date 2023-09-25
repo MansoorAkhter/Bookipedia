@@ -13,7 +13,7 @@ const Home = ({navigation}) => {
       setIsConnected(state.isConnected);
     });
   }, []);
-
+console.log(isConnected)
   return (
     <View style={styles.main}>
       <UserBar title="Mansoor" onPress={() => navigation.push('Loaders')} />
